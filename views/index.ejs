@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Node Caller</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+    input, label, button {
+      font-size: 12px;
+      font-family: sans-serif;
+      margin: 5px 5px 5px 5px;
+    }
+    input {
+      width: 200px;
+    }
+    button {
+      padding: 5px 5px 5px 5px;
+    }
+  </style>
+</head>
+<body>
+  <label for="twilio_phone_number">Twilio Phone Number:</label><input id="twilio_phone_number" name="twilio_phone_number" type="text" placeholder="E.g. 18001234567" value=""><br>
+  <label for="twilio_account_sid">Twilio Account SID:</label><input id="twilio_account_sid" name="twilio_account_sid" type="text" value=""><br>
+  <label for="twilio_auth_token">Twilio Auth Token:</label><input id="twilio_auth_token" name="twilio_auth_token" type="text" value=""><br>
+  <label for="tu_url">TransUnion TwiML URL:</label><input id="tu_url" name="tu_url" type="text" placeholder="https://handler.twilio.com/twiml/..." value=""><br>
+  <label for="ef_url">EquiFax TwiML URL:</label><input id="ef_url" name="ef_url" type="text" placeholder="https://handler.twilio.com/twiml/..." value=""><br>
+  <label for="exp_url">Experian TwiML URL:</label><input id="exp_url" name="exp_url" type="text" placeholder="https://handler.twilio.com/twiml/..." value=""><br>
+  <label for="zip_code">Zip Code:</label><input id="zip_code" name="zip_code" type="text" value=""><br>
+  <label for="street_number">Street Number:</label><input id="street_number" name="street_number" type="text" value=""><br>
+  <label for="state">State:</label><input id="state" name="state" type="text" placeholder="E.g. Florida" value=""><br>
+  <label for="ssn">SSN:</label><input id="ssn" name="ssn" type="text" value=""><br>
+  <label for="dob">DOB:</label><input id="dob" name="dob" type="text" placeholder="DDMMYYYY" value=""><br>
+  <label for="cc_number">CC Number:</label><input id="cc_number" name="cc_number" type="text" value=""><br>
+  <label for="cc_exp">CC Exp:</label><input id="cc_exp" name="cc_exp" type="text" placeholder="MMYY" value=""><br>
+  <label for="cc_type">CC Type:</label><input id="cc_type" name="cc_type" type="text" placeholder="1=mc; 2=visa; 3=amex; 4=discover" value=""><br>
+  <label for="security_pin">Security Pin:</label><input id="security_pin" name="security_pin" type="text" value=""><br>
+  <button id="submit_button">Submit</button>
+</body>
+<script type="text/javascript">
+  $("#submit_button").on("click", function() {
+    const twilio_phone_number = $("#twilio_phone_number").val();
+    const twilio_account_sid = $("#twilio_account_sid").val();
+    const twilio_auth_token = $("#twilio_auth_token").val();
+    const tu_url = $("#tu_url").val();
+    const ef_url = $("#ef_url").val();
+    const exp_url = $("#exp_url").val();
+    const zip_code = $("#zip_code").val();
+    const street_number = $("#street_number").val();
+    const state = $("#state").val();
+    const ssn = $("#ssn").val();
+    const dob = $("#dob").val();
+    const cc_number = $("#cc_number").val();
+    const cc_exp = $("#cc_exp").val();
+    const cc_type = $("#cc_type").val();
+    const security_pin = $("#security_pin").val();
+
+    $.post("/freezeCredit", {
+      twilio_phone_number: twilio_phone_number,
+      twilio_account_sid: twilio_account_sid,
+      twilio_auth_token: twilio_auth_token,
+      tu_url: tu_url,
+      ef_url: ef_url,
+      exp_url: exp_url,
+      zip_code: zip_code,
+      street_number: street_number,
+      state: state,
+      ssn: ssn,
+      dob: dob,
+      cc_number: cc_number,
+      cc_exp: cc_exp,
+      cc_type: cc_type,
+      security_pin: security_pin
+    },
+    function(data) {
+      const noError = data.error === false;
+      console.log("Returned data: ", data);
+      if (noError) {
+        alert("Success - write down the 6-digit pin, it is your TransUnion unfreeze code. Experian and Equifax mail you a copy of your pin. You can listen to the recording of any calls to get this information on your Twilio dashboard as well.");
+      } else {
+        alert("Failure - something went wrong please check the console output.");
+      }
+    });
+
+  });
+</script>
+</html>
