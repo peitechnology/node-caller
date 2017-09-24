@@ -1,7 +1,3 @@
-# TODO:
-
-- Link medium blog post
-
 ## Description:
 
 Freezing credit is a good way to protect yourself from identity theft. The process consists of calling three major credit bureaus (TransUnion, Equifax, and Experian), entering information, paying a fee (usually $10), and writing down the security pin used to unfreeze credit at a later date. In actuality, TransUnion and Equifax (pin and confirmation code) are known from the call. However, at the time of publishing, Experian mails the pin needed to unfreeze your account to your address after the call is made.
