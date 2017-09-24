@@ -1,3 +1,7 @@
+#TODO:
+
+- Link medium blog post
+
 ## Description:
 
 * NOTE: This program is not perfect. Know that using this program with actual data is intended to actually freeze credit and charges the card entered.
@@ -100,25 +104,25 @@ __NEEDS__: Pause lengths adjusted or another method used to make calling more ac
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Pause length="25"/>
-  	<Play digits="{{ZipCode}}"></Play>
-  	<Pause length="33"/>
-  	<Play digits="w3"></Play>
-  	<Pause length="10"/>
-  	<Play digits="{{SSN}}"></Play>
-  	<Pause length="10"/>
-  	<Play digits="{{DOB}}"></Play>
-  	<Pause length="6"/>
-  	<Play digits="{{StreetNumber}}"></Play>
-  	<Pause length="11"/>
-  	<Play digits="{{SecurityPin}}"></Play>
-  	<Pause length="7"/>
-    <Play digits="1"><Play/>
-    <Pause length="28"/>
-  	<Play digits="{{CcNum}}"></Play>
-  	<Pause length="4"/>
-  	<Play digits="{{CcExp}}"></Play>
-  	<Pause length="20"/>
+		<Pause length="25"/>
+		<Play digits="{{ZipCode}}"></Play>
+		<Pause length="33"/>
+		<Play digits="w3"></Play>
+		<Pause length="10"/>
+		<Play digits="{{SSN}}"></Play>
+		<Pause length="10"/>
+		<Play digits="{{DOB}}"></Play>
+		<Pause length="6"/>
+		<Play digits="{{StreetNumber}}"></Play>
+		<Pause length="11"/>
+		<Play digits="{{SecurityPin}}"></Play>
+		<Pause length="7"/>
+		<Play digits="1"><Play/>
+		<Pause length="28"/>
+		<Play digits="{{CcNum}}"></Play>
+		<Pause length="4"/>
+		<Play digits="{{CcExp}}"></Play>
+		<Pause length="20"/>
 </Response>
 ```
 

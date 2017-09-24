@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "An automated calling system.",
   "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peitechnology/node-caller.git"
+  },
   "license": "ISC",
   "scripts": {
     "dev": "nodemon --exec babel-node ./app.js",
