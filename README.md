@@ -4,19 +4,17 @@
 
 ## Description:
 
-* NOTE: This program is not perfect. Know that using this program with actual data is intended to actually freeze credit and charges the card entered.
-
 Freezing credit is a good way to protect yourself from identity theft. The process consists of calling three major credit bureaus (TransUnion, Equifax, and Experian), entering information, paying a fee (usually $10), and writing down the security pin used to unfreeze credit at a later date. In actuality, TransUnion and Equifax (pin and confirmation code) are known from the call. However, at the time of publishing, Experian mails the pin needed to unfreeze your account to your address after the call is made.
 
-Twilio's API is used so that we can play back the recordings of the calls afterwards if we need to debug or listen for the unfreeze information manually.
+Twilio's record feature is used to play back the recordings of the calls afterwards to debug or listen for the unfreeze information manually.
 
 ## Background:
 
-Since the recent Equifax security breach it has become evident that people need access to the tools needed to prevent identity theft. Freezing credit is one of those tools. This process can be done over the phone and takes about 30 minutes, ~$30, and some personal information.
+Since the recent Equifax security breach, it has become evident that people need access to tools that can help prevent identity theft. Freezing credit is one of the most effective and highly recommend first steps, since the hack. This process can be done over the phone and takes about 3 hours, ~$30, and some personal information.
 
 ## Goal:
 
-To automate the process of freezing credit after the recent Equifax security breach.
+To automate the legacy process of freezing credit at all three burueas; efficiently, effectively, and securely.
 
 ## Installation & Use:
 
