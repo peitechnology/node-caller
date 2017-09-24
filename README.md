@@ -1,4 +1,4 @@
-#TODO:
+# TODO:
 
 - Link medium blog post
 
@@ -104,25 +104,25 @@ __NEEDS__: Pause lengths adjusted or another method used to make calling more ac
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-		<Pause length="25"/>
-		<Play digits="{{ZipCode}}"></Play>
-		<Pause length="33"/>
-		<Play digits="w3"></Play>
-		<Pause length="10"/>
-		<Play digits="{{SSN}}"></Play>
-		<Pause length="10"/>
-		<Play digits="{{DOB}}"></Play>
-		<Pause length="6"/>
-		<Play digits="{{StreetNumber}}"></Play>
-		<Pause length="11"/>
-		<Play digits="{{SecurityPin}}"></Play>
-		<Pause length="7"/>
-		<Play digits="1"><Play/>
-		<Pause length="28"/>
-		<Play digits="{{CcNum}}"></Play>
-		<Pause length="4"/>
-		<Play digits="{{CcExp}}"></Play>
-		<Pause length="20"/>
+	<Pause length="25"/>
+	<Play digits="{{ZipCode}}"></Play>
+	<Pause length="33"/>
+	<Play digits="w3"></Play>
+	<Pause length="10"/>
+	<Play digits="{{SSN}}"></Play>
+	<Pause length="10"/>
+	<Play digits="{{DOB}}"></Play>
+	<Pause length="6"/>
+	<Play digits="{{StreetNumber}}"></Play>
+	<Pause length="11"/>
+	<Play digits="{{SecurityPin}}"></Play>
+	<Pause length="7"/>
+	<Play digits="1"><Play/>
+	<Pause length="28"/>
+	<Play digits="{{CcNum}}"></Play>
+	<Pause length="4"/>
+	<Play digits="{{CcExp}}"></Play>
+	<Pause length="20"/>
 </Response>
 ```
 
@@ -131,25 +131,25 @@ __NEEDS__: Pause lengths adjusted or another method used to make calling more ac
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Pause length="65"/>
-    <Play digits="w3"></Play>
-    <Pause length="60"/>
-    <Play digits="w1"></Play>
-    <Pause length="2"/>
-    <Say voice="alice">{{State}}.</Say>
-    <Pause length="7"/>
-    <Play digits="w1"></Play>
-    <Pause length="4"/>
-    <Play digits="{{SSN}}"></Play>
-    <Pause length="11"/>
-    <Play digits="w1"></Play>
-    <Pause length="30"/>
-    <Play digits="{{StreetNumber}}"></Play>
-    <Pause length="7"/>
-    <Play digits="w1"></Play>
-    <Pause length="12"/>
-    <Play digits="w1"></Play>
-    <Pause length="120"/>
+	<Pause length="65"/>
+	<Play digits="w3"></Play>
+	<Pause length="60"/>
+	<Play digits="w1"></Play>
+	<Pause length="2"/>
+	<Say voice="alice">{{State}}.</Say>
+	<Pause length="7"/>
+	<Play digits="w1"></Play>
+	<Pause length="4"/>
+	<Play digits="{{SSN}}"></Play>
+	<Pause length="11"/>
+	<Play digits="w1"></Play>
+	<Pause length="30"/>
+	<Play digits="{{StreetNumber}}"></Play>
+	<Pause length="7"/>
+	<Play digits="w1"></Play>
+	<Pause length="12"/>
+	<Play digits="w1"></Play>
+	<Pause length="120"/>
 </Response>
 ```
 
@@ -158,39 +158,39 @@ __NEEDS__: Pause lengths adjusted or another method used to make calling more ac
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Pause length="13"/>
-    <Play digits="w2"></Play>
-    <Pause length="9"/>
-    <Play digits="w2"></Play>
-    <Pause length="5"/>
-    <Play digits="w1"></Play>
-    <Pause length="12"/>
-    <Play digits="w2"></Play>
-    <Pause length="25"/>
-    <Play digits="{{SSN}}"></Play>
-    <Pause length="13"/>
-    <Play digits="w1"></Play>
-    <Pause length="8"/>
-    <Play digits="{{DOB}}"></Play>
-    <Pause length="15"/>
-    <Play digits="w1"></Play>
-    <Pause length="4"/>
-    <Play digits="{{ZipCode}}"></Play>
-    <Pause length="20"/>
-    <Play digits="{{StreetNumber}}"></Play>
-    <Pause length="12"/>
-    <Play digits="w2"></Play>
-    <Pause length="11"/>
-    <Play digits="w1"></Play>
-    <Pause length="93"/>
-    <Play digits="{{CardType}}"></Play>
-    <Pause length="5"/>
-    <Play digits="{{CcNum}}"></Play>
-    <Pause length="17"/>
-    <Play digits="w1"></Play>
-    <Pause length="5"/>
-    <Play digits="{{CcExp}}"></Play>
-    <Pause length="60"/>
+	<Pause length="13"/>
+	<Play digits="w2"></Play>
+	<Pause length="9"/>
+	<Play digits="w2"></Play>
+	<Pause length="5"/>
+	<Play digits="w1"></Play>
+	<Pause length="12"/>
+	<Play digits="w2"></Play>
+	<Pause length="25"/>
+	<Play digits="{{SSN}}"></Play>
+	<Pause length="13"/>
+	<Play digits="w1"></Play>
+	<Pause length="8"/>
+	<Play digits="{{DOB}}"></Play>
+	<Pause length="15"/>
+	<Play digits="w1"></Play>
+	<Pause length="4"/>
+	<Play digits="{{ZipCode}}"></Play>
+	<Pause length="20"/>
+	<Play digits="{{StreetNumber}}"></Play>
+	<Pause length="12"/>
+	<Play digits="w2"></Play>
+	<Pause length="11"/>
+	<Play digits="w1"></Play>
+	<Pause length="93"/>
+	<Play digits="{{CardType}}"></Play>
+	<Pause length="5"/>
+	<Play digits="{{CcNum}}"></Play>
+	<Pause length="17"/>
+	<Play digits="w1"></Play>
+	<Pause length="5"/>
+	<Play digits="{{CcExp}}"></Play>
+	<Pause length="60"/>
 </Response>
 ```
 
