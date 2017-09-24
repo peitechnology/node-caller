@@ -97,8 +97,6 @@ enter credit card #, then 1 to confirm
 
 __Description__: TwiML are XML files that control the call flow. You can easily host these using [TwiML bins](https://www.twilio.com/console/runtime/twiml-bins). The URL of the bin will be passed into the Twilio client when making calls. Template variables (e.g. {{}}) are filled in by passing their values in the querystring to the bin's URL.
 
-__NEEDS__: Pause lengths adjusted or another method used to make calling more accurate.
-
 ### TransUnion Script:
 
 ```
