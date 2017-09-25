@@ -1,5 +1,7 @@
 # Node-Caller
 
+If you need extra help setting up Twilio, configuring your credentials, or hosting the TwiML scripts see our [medium post](https://medium.com/@Pei_Blog/how-to-automatically-freeze-your-credit-at-all-three-bureaus-d756494ea46) on setup and configuration.
+
 ## Table of contents:
 
 * [Overview](#overview)
@@ -10,16 +12,23 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
   * [Use](#use)
-* [Help Needed](#help needed)
-  * [](#)
-  * [](#)
-  * [](#)
+* [Configuration](#configuration)
+  * [Call Flow](#call-flow)
+    * [TransUnion Script](#transunion-script)
+    * [Equifax Script](#equifax-script)
+    * [Experian Script](#experian-script)
+  * [TwiML Examples](#twiml-examples)
+    * [TransUnion TwiML](#transunion-twiml)
+    * [Equifax TwiML](#equifax-twiml)
+    * [Experian TwiML](#experian-twiml)
+* [Help Needed](#help-needed)
+* [Disclaimer](#disclaimer)
 
 ## Overview:
 
 ### Description:
 
-Freezing credit is a good way to protect yourself from identity theft. The process consists of calling three major credit bureaus (TransUnion, Equifax, and Experian), entering information, paying a fee (usually $10), and writing down the security pin used to unfreeze credit at a later date. In actuality, TransUnion and Equifax (pin and confirmation code) are known from the call. However, at the time of publishing, Experian mails the pin needed to unfreeze your account to your address after the call is made.
+Freezing credit is a good way to protect yourself from identity theft. The process consists of calling three major credit bureaus (TransUnion, Equifax, and Experian), entering information, paying a fee (usually $10), and writing down the security pin used to unfreeze credit at a later date. In actuality, TransUnion and Equifax (pin and confirmation code) are known by the end of the call. However, at the time of publishing, Experian mails the pin needed to unfreeze your account to your address after the call is made.
 
 Twilio's record feature is used to play back the recordings of the calls afterwards to debug or listen for the unfreeze information manually.
 
@@ -35,7 +44,7 @@ To automate the legacy process of freezing credit at all three bureaus; efficien
 
 ### Prerequisites:
 
-* Twilio account // TODO: LINK MEDIUM POST HERE
+* [Twilio account setup](https://medium.com/@Pei_Blog/how-to-automatically-freeze-your-credit-at-all-three-bureaus-d756494ea46)
 
 ### Installation:
 
@@ -53,20 +62,20 @@ Run the project:
 npm start
 ```
 
-Open browser to localhost:8080 and fill in the form.
+Open browser to localhost:8080 and fill in the form. [Check recordings](https://medium.com/@Pei_Blog/how-to-automatically-freeze-your-credit-at-all-three-bureaus-d756494ea46) after calls to debug or listen for pins.
 
-## Help Needed:
+## Configuration:
 
-It would be great to get help or comments in the following areas:
-- Security
-- Pause Method (lacks accuracy because of variable response time, speech recognition is one improvement option)
-- Already frozen case
+Refer to our [medium article](https://medium.com/@Pei_Blog/how-to-automatically-freeze-your-credit-at-all-three-bureaus-d756494ea46) for how to host TwiML and setup with your own Twilio account.
 
-## Call Flow:
+### Call Flow:
 
 The following is the flow for each call to freeze credit at the major institutions. Credit to reddit, as this was originally found on the [Equifax megathread](https://www.reddit.com/r/personalfinance/comments/6yv4gb/official_mega_thread_recent_equifax_security/).
 
-__TransUnion__ 888-909-8872:
+#### TransUnion Script:
+__TransUnion__ - 888-909-8872
+
+Pin is the 6-digit code you entered and mailed to you after the call.
 
 ```
 enter zip code
@@ -80,7 +89,10 @@ credit card number for $10 charge
 4 digit expiration date of credit card MMYY
 ```
 
-__Equifax__ 800-685-1111:
+#### Equifax Script:
+__Equifax__ - 800-685-1111
+
+Pin and confirmation code are read back during the call. Check Twilio recordings to replay call and listen for this data.
 
 ```
 press 3 to select freezes
@@ -95,7 +107,10 @@ there will be a long pause at this point but when the bot comes back it goes ver
     Press * to repeat both until you have it correct
 ```
 
-__Experian__ 888-397-3742:
+#### Experian Script:
+__Experian__ - 888-397-3742
+
+This pin will be mailed to you after the call.
 
 ```
 press 2 for freeze
@@ -114,11 +129,10 @@ enter credit card #, then 1 to confirm
 4 digit expiration date of credit card then # key MMYY#
 ```
 
-## TwiML Examples:
-
+### TwiML Examples:
 __Description__: TwiML are XML files that control the call flow. You can easily host these using [TwiML bins](https://www.twilio.com/console/runtime/twiml-bins). The URL of the bin will be passed into the Twilio client when making calls. Template variables (e.g. {{}}) are filled in by passing their values in the querystring to the bin's URL.
 
-### TransUnion Script:
+#### TransUnion TwiML:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -145,7 +159,7 @@ __Description__: TwiML are XML files that control the call flow. You can easily 
 </Response>
 ```
 
-### Equifax Script:
+#### Equifax TwiML:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -172,7 +186,7 @@ __Description__: TwiML are XML files that control the call flow. You can easily 
 </Response>
 ```
 
-### Experian Script:
+#### Experian TwiML:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -212,6 +226,13 @@ __Description__: TwiML are XML files that control the call flow. You can easily 
 	<Pause length="60"/>
 </Response>
 ```
+
+## Help Needed:
+
+It would be great to get help or comments in the following areas:
+- Security
+- Pause Method (lacks accuracy because of variable response time, speech recognition is one improvement option)
+- Already frozen case
 
 ## Disclaimer:
 
