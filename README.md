@@ -1,3 +1,11 @@
+# Node-Caller
+[Link-name2](#Header2)
+
+## Table of contents:
+
+* [Test](#node-caller)
+* [Goal](#goal)
+
 ## Description:
 
 Freezing credit is a good way to protect yourself from identity theft. The process consists of calling three major credit bureaus (TransUnion, Equifax, and Experian), entering information, paying a fee (usually $10), and writing down the security pin used to unfreeze credit at a later date. In actuality, TransUnion and Equifax (pin and confirmation code) are known from the call. However, at the time of publishing, Experian mails the pin needed to unfreeze your account to your address after the call is made.
@@ -10,7 +18,7 @@ Since the recent Equifax security breach, it has become evident that people need
 
 ## Goal:
 
-To automate the legacy process of freezing credit at all three burueas; efficiently, effectively, and securely.
+To automate the legacy process of freezing credit at all three bureaus; efficiently, effectively, and securely.
 
 ## Installation & Use:
 
