@@ -1,6 +1,6 @@
 # Node-Caller
 
-If you need extra help setting up Twilio, configuring your credentials, or hosting the TwiML scripts see our [medium post](https://medium.com/@Pei_Blog/how-to-automatically-freeze-your-credit-at-all-three-bureaus-d756494ea46) on setup and configuration.
+If you need extra help setting up Twilio, configuring your credentials, or hosting the TwiML scripts see the [medium post](https://medium.com/@Pei_Blog/how-to-automatically-freeze-your-credit-at-all-three-bureaus-d756494ea46) on setup and configuration.
 
 ## Table of contents:
 
@@ -73,9 +73,9 @@ Refer to our [medium article](https://medium.com/@Pei_Blog/how-to-automatically-
 The following is the flow for each call to freeze credit at the major institutions. Credit to reddit, as this was originally found on the [Equifax megathread](https://www.reddit.com/r/personalfinance/comments/6yv4gb/official_mega_thread_recent_equifax_security/).
 
 #### TransUnion Script:
-__TransUnion__ - 888-909-8872
+__Phone Number:__ 888-909-8872
 
-Pin is the 6-digit code you entered and mailed to you after the call.
+__Pin:__ Pin is the 6-digit code you entered and mailed to you after the call.
 
 ```
 enter zip code
@@ -90,9 +90,9 @@ credit card number for $10 charge
 ```
 
 #### Equifax Script:
-__Equifax__ - 800-685-1111
+__Phone Number:__ 800-685-1111
 
-Pin and confirmation code are read back during the call. Check Twilio recordings to replay call and listen for this data.
+__Pin:__ Pin and confirmation code are read back during the call. Check Twilio recordings to replay call and listen for this data.
 
 ```
 press 3 to select freezes
@@ -108,9 +108,9 @@ there will be a long pause at this point but when the bot comes back it goes ver
 ```
 
 #### Experian Script:
-__Experian__ - 888-397-3742
+__Phone Number:__ 888-397-3742
 
-This pin will be mailed to you after the call.
+__Pin:__ This pin will be mailed to you after the call.
 
 ```
 press 2 for freeze
