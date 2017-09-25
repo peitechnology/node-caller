@@ -1,32 +1,51 @@
 # Node-Caller
-[Link-name2](#Header2)
 
 ## Table of contents:
 
-* [Test](#node-caller)
-* [Goal](#goal)
+* [Overview](#overview)
+  * [Description](#description)
+  * [Background](#background)
+  * [Goal](#goal)
+* [Setup](#setup)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+  * [Use](#use)
+* [Help Needed](#help needed)
+  * [](#)
+  * [](#)
+  * [](#)
 
-## Description:
+## Overview:
+
+### Description:
 
 Freezing credit is a good way to protect yourself from identity theft. The process consists of calling three major credit bureaus (TransUnion, Equifax, and Experian), entering information, paying a fee (usually $10), and writing down the security pin used to unfreeze credit at a later date. In actuality, TransUnion and Equifax (pin and confirmation code) are known from the call. However, at the time of publishing, Experian mails the pin needed to unfreeze your account to your address after the call is made.
 
 Twilio's record feature is used to play back the recordings of the calls afterwards to debug or listen for the unfreeze information manually.
 
-## Background:
+### Background:
 
 Since the recent Equifax security breach, it has become evident that people need access to tools that can help prevent identity theft. Freezing credit is one of the most effective and highly recommend first steps, since the hack. This process can be done over the phone and takes about 3 hours, ~$30, and some personal information.
 
-## Goal:
+### Goal:
 
 To automate the legacy process of freezing credit at all three bureaus; efficiently, effectively, and securely.
 
-## Installation & Use:
+## Setup:
+
+### Prerequisites:
+
+* Twilio account // TODO: LINK MEDIUM POST HERE
+
+### Installation:
 
 Open terminal in the project's folder:
 
 ```
 npm install
 ```
+
+### Use:
 
 Run the project:
 
@@ -36,7 +55,7 @@ npm start
 
 Open browser to localhost:8080 and fill in the form.
 
-## Help/Comments Needed:
+## Help Needed:
 
 It would be great to get help or comments in the following areas:
 - Security
