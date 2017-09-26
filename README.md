@@ -32,6 +32,8 @@ Freezing credit is a good way to protect yourself from identity theft. The proce
 
 Twilio's record feature is used to play back the recordings of the calls afterwards to debug or listen for the unfreeze information manually.
 
+Check out our [medium post](https://medium.com/@Pei_Blog/how-to-automatically-freeze-your-credit-at-all-three-bureaus-d756494ea46) to learn more about the Twilio setup or [Pei](https://www.getpei.co) if you want to know more about what we build on a daily basis. 
+
 ### Background:
 
 Since the recent Equifax security breach, it has become evident that people need access to tools that can help prevent identity theft. Freezing credit is one of the most effective and highly recommend first steps, since the hack. This process can be done over the phone and takes about 3 hours, ~$30, and some personal information.
