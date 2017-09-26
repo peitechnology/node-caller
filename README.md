@@ -1,6 +1,6 @@
 # Node-Caller
 
-If you need extra help setting up Twilio, configuring your credentials, or hosting the TwiML scripts see the [medium post](https://medium.com/@Pei_Blog/how-to-automatically-freeze-your-credit-at-all-three-bureaus-d756494ea46) on setup and configuration.
+If you need extra help setting up Twilio, configuring your credentials, or hosting the TwiML scripts see the [medium post](https://medium.com/@Pei_Blog/how-to-automatically-freeze-your-credit-at-all-three-bureaus-d756494ea46) on setup and configuration. To see more about what we are working on check out [Pei](https://www.getpei.co).
 
 ## Table of contents:
 
